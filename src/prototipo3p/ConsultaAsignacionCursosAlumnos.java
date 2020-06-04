@@ -23,6 +23,7 @@ public class ConsultaAsignacionCursosAlumnos extends javax.swing.JInternalFrame 
      */
     public ConsultaAsignacionCursosAlumnos() {
         initComponents();
+        cboBuscarConsulta();
     }
 
     /**

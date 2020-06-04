@@ -47,7 +47,9 @@ public class ContenedorMDIMenu extends javax.swing.JFrame {
         jMenuItem18 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuBuscar = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
         jMenu5 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setExtendedState(6);
@@ -56,11 +58,11 @@ public class ContenedorMDIMenu extends javax.swing.JFrame {
         jDesktopPane.setLayout(jDesktopPaneLayout);
         jDesktopPaneLayout.setHorizontalGroup(
             jDesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 585, Short.MAX_VALUE)
         );
         jDesktopPaneLayout.setVerticalGroup(
             jDesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 275, Short.MAX_VALUE)
+            .addGap(0, 466, Short.MAX_VALUE)
         );
 
         jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
@@ -68,7 +70,7 @@ public class ContenedorMDIMenu extends javax.swing.JFrame {
         jMenuBar1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
         jMenu3.setBorder(null);
-        jMenu3.setText("Archivo");
+        jMenu3.setText("Abrir");
         jMenu3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jMenuBar1.add(jMenu3);
 
@@ -202,8 +204,15 @@ public class ContenedorMDIMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
+        jMenu2.setText("Herramientas");
+        jMenuBar1.add(jMenu2);
+
         jMenu5.setText("Ayuda");
         jMenu5.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+
+        jMenuItem1.setText("Link Video");
+        jMenu5.add(jMenuItem1);
+
         jMenuBar1.add(jMenu5);
 
         setJMenuBar(jMenuBar1);
@@ -295,7 +304,13 @@ public class ContenedorMDIMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem18ActionPerformed
 
     private void jMenuBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuBuscarActionPerformed
-        // TODO add your handling code here:
+       
+        ConsultaAsignacionCursosAlumnos ventantaAsignacionA = new ConsultaAsignacionCursosAlumnos();
+        jDesktopPane.add(ventantaAsignacionA);
+        Dimension desktopSize = jDesktopPane.getSize();
+        Dimension FrameSize = ventantaAsignacionA.getSize();
+        ventantaAsignacionA.setLocation((desktopSize.width-FrameSize.width)/2,(desktopSize.height-FrameSize.height)/2);
+        
         
     }//GEN-LAST:event_jMenuBuscarActionPerformed
 
@@ -337,12 +352,14 @@ public class ContenedorMDIMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktopPane;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuBuscar;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem17;
     private javax.swing.JMenuItem jMenuItem18;
