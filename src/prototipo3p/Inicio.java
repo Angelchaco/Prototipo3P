@@ -145,6 +145,8 @@ public class Inicio extends javax.swing.JFrame {
                     if(rs2.next()){
                         JOptionPane.showMessageDialog(null, "Bienvenido" + "  " + rs.getString("nombre"));
 
+                        ContenedorMDIMenu ventanai = new ContenedorMDIMenu();
+                        ventanai.setVisible(true);
                         
                         txtUsuario.setText("");
                         txtPass.setText("");
